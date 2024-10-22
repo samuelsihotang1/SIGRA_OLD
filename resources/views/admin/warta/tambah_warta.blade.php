@@ -48,19 +48,22 @@
                     </ul>
                 </div>
                 @endif
-                <form method="post" enctype="multipart/form-data" action="{{ url('/' . $nama_gereja . '/admin/warta/simpan_warta') }}">
+                <form method="post" enctype="multipart/form-data"
+                    action="{{ url('/' . $nama_gereja . '/admin/warta/simpan_warta') }}">
                     @csrf
                     <div class="form-group row">
                         <label class="col-sm-12 col-md-2 col-form-label">Pilih Gambar</label>
                         <div class="col-sm-12 col-md-10">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gambar_option" id="defaultGambar" value="default" checked>
+                                <input class="form-check-input" type="radio" name="gambar_option" id="defaultGambar"
+                                    value="default" checked>
                                 <label class="form-check-label" for="defaultGambar">
                                     Gunakan Gambar Default
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gambar_option" id="customGambar" value="custom">
+                                <input class="form-check-input" type="radio" name="gambar_option" id="customGambar"
+                                    value="custom">
                                 <label class="form-check-label" for="customGambar">
                                     Unggah Gambar Sendiri
                                 </label>
@@ -94,9 +97,112 @@
                     <br>
                     <h4 class="text-blue h4">Pelayanan Pagi</h4>
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Pengkotbah Pagi</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="pengkotbah_pagi" placeholder="" />
+                        <label class="col-sm-12 col-md-2 col-form-label" for="toggleInput">
+                            <div class="form-group row">
+                                <label class="col-sm-12 col-md-2 col-form-label">Pengkotbah Pagi</label>
+                                <div class="col-sm-12 col-md-auto">
+                                    <input type="checkbox" id="togglePengkotbahPagi"
+                                        onchange="toggleInputVisibility('pengkotbahPagiInput')">
+                                </div>
+                                <div class="col-sm-12 col-md-9">
+                                    <input class="form-control" type="text" name="pengkotbah_pagi"
+                                        id="pengkotbahPagiInput" placeholder="" style="display: none;" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-12 col-md-2 col-form-label">Liturgis Pagi</label>
+                                <div class="col-sm-12 col-md-auto">
+                                    <input type="checkbox" id="toggleLiturgisPagi"
+                                        onchange="toggleInputVisibility('liturgisPagiInput')">
+                                </div>
+                                <div class="col-sm-12 col-md-9">
+                                    <input class="form-control" type="text" name="liturgis_pagi" id="liturgisPagiInput"
+                                        placeholder="" style="display: none;" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-12 col-md-2 col-form-label">Singers Pagi</label>
+                                <div class="col-sm-12 col-md-auto">
+                                    <input type="checkbox" id="toggleSingersPagi"
+                                        onchange="toggleInputVisibility('singersPagiInput')">
+                                </div>
+                                <div class="col-sm-12 col-md-9">
+                                    <input class="form-control" type="text" name="singers_pagi" id="singersPagiInput"
+                                        placeholder="" style="display: none;" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-12 col-md-2 col-form-label">Pemusik Pagi</label>
+                                <div class="col-sm-12 col-md-auto">
+                                    <input type="checkbox" id="togglePemusikPagi"
+                                        onchange="toggleInputVisibility('pemusikPagiInput')">
+                                </div>
+                                <div class="col-sm-12 col-md-9">
+                                    <input class="form-control" type="text" name="pemusik_pagi" id="pemusikPagiInput"
+                                        placeholder="" style="display: none;" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-12 col-md-2 col-form-label">Tamborin Pagi</label>
+                                <div class="col-sm-12 col-md-auto">
+                                    <input type="checkbox" id="toggleTamborinPagi"
+                                        onchange="toggleInputVisibility('tamborinPagiInput')">
+                                </div>
+                                <div class="col-sm-12 col-md-9">
+                                    <input class="form-control" type="text" name="tamborin_pagi" id="tamborinPagiInput"
+                                        placeholder="" style="display: none;" />
+                                </div>
+                            </div>
+
+                            <!-- Repeat this for all the remaining fields in the list -->
+                            <div class="form-group row">
+                                <label class="col-sm-12 col-md-2 col-form-label">Pengkotbah Siang</label>
+                                <div class="col-sm-12 col-md-auto">
+                                    <input type="checkbox" id="togglePengkotbahSiang"
+                                        onchange="toggleInputVisibility('pengkotbahSiangInput')">
+                                </div>
+                                <div class="col-sm-12 col-md-9">
+                                    <input class="form-control" type="text" name="pengkotbah_siang"
+                                        id="pengkotbahSiangInput" placeholder="" style="display: none;" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-sm-12 col-md-2 col-form-label">Liturgis Siang</label>
+                                <div class="col-sm-12 col-md-auto">
+                                    <input type="checkbox" id="toggleLiturgisSiang"
+                                        onchange="toggleInputVisibility('liturgisSiangInput')">
+                                </div>
+                                <div class="col-sm-12 col-md-9">
+                                    <input class="form-control" type="text" name="liturgis_siang"
+                                        id="liturgisSiangInput" placeholder="" style="display: none;" />
+                                </div>
+                            </div>
+
+                            <!-- Add the rest of the fields similarly -->
+
+                            <script>
+                                function toggleInputVisibility(inputId) {{
+                            var input = document.getElementById(inputId);
+                            if (input.style.display === "none") {{
+                                input.style.display = "block";
+                            }} else {{
+                                input.style.display = "none";
+                            }}
+                        }}
+                            </script>
+                            Pengkotbah Pagi
+                        </label>
+                        <div class="col-sm-12 col-md-auto">
+                            <input type="checkbox" id="toggleInput" onchange="toggleInputVisibility()">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="pengkotbah_pagi" id="pengkotbahInput"
+                                placeholder="" style="display: none;" />
                         </div>
                     </div>
                     <div class="form-group row">
@@ -206,17 +312,20 @@
                     <br>
                     <div class="form-group">
                         <label class="form-label"><strong>Tata Ibadah</strong></label>
-                        <textarea class="form-control tinymce-editor" name="tata_ibadah" placeholder="Masukkan detail Tata Ibadah..."></textarea>
+                        <textarea class="form-control tinymce-editor" name="tata_ibadah"
+                            placeholder="Masukkan detail Tata Ibadah..."></textarea>
                     </div>
                     <br>
                     <div class="form-group">
                         <label class="form-label"><strong>Laporan Persembahan</strong></label>
-                        <textarea class="form-control tinymce-editor" name="laporan_persembahan" placeholder="Masukkan detail Laporan Persembahan..."></textarea>
+                        <textarea class="form-control tinymce-editor" name="laporan_persembahan"
+                            placeholder="Masukkan detail Laporan Persembahan..."></textarea>
                     </div>
                     <br>
                     <div class="form-group">
                         <label class="form-label"><strong>Laporan Perpuluhan</strong></label>
-                        <textarea class="form-control tinymce-editor" name="laporan_perpuluhan" placeholder="Masukkan detail Laporan Perpuluhan..."></textarea>
+                        <textarea class="form-control tinymce-editor" name="laporan_perpuluhan"
+                            placeholder="Masukkan detail Laporan Perpuluhan..."></textarea>
                     </div>
                     <hr>
                     <div class="text-center">
@@ -242,6 +351,18 @@
 
                         toggleGambarInput(); // Initial call
                     });
+                </script>
+                <script>
+                    function toggleInputVisibility() {
+                        var checkbox = document.getElementById('toggleInput');
+                        var input = document.getElementById('pengkotbahInput');
+                        if (checkbox.checked) {
+                            input.style.display = 'block'; 
+                        } else {
+                            input.style.display = 'none'; 
+                            input.value = ''; 
+                        }
+                    }
                 </script>
             </div>
             <!-- Default Basic Forms End -->
