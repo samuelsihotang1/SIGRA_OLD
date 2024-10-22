@@ -97,108 +97,10 @@
                     <br>
                     <h4 class="text-blue h4">Pelayanan Pagi</h4>
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label" for="toggleInput">
-                            <div class="form-group row">
-                                <label class="col-sm-12 col-md-2 col-form-label">Pengkotbah Pagi</label>
-                                <div class="col-sm-12 col-md-auto">
-                                    <input type="checkbox" id="togglePengkotbahPagi"
-                                        onchange="toggleInputVisibility('pengkotbahPagiInput')">
-                                </div>
-                                <div class="col-sm-12 col-md-9">
-                                    <input class="form-control" type="text" name="pengkotbah_pagi"
-                                        id="pengkotbahPagiInput" placeholder="" style="display: none;" />
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-sm-12 col-md-2 col-form-label">Liturgis Pagi</label>
-                                <div class="col-sm-12 col-md-auto">
-                                    <input type="checkbox" id="toggleLiturgisPagi"
-                                        onchange="toggleInputVisibility('liturgisPagiInput')">
-                                </div>
-                                <div class="col-sm-12 col-md-9">
-                                    <input class="form-control" type="text" name="liturgis_pagi" id="liturgisPagiInput"
-                                        placeholder="" style="display: none;" />
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-sm-12 col-md-2 col-form-label">Singers Pagi</label>
-                                <div class="col-sm-12 col-md-auto">
-                                    <input type="checkbox" id="toggleSingersPagi"
-                                        onchange="toggleInputVisibility('singersPagiInput')">
-                                </div>
-                                <div class="col-sm-12 col-md-9">
-                                    <input class="form-control" type="text" name="singers_pagi" id="singersPagiInput"
-                                        placeholder="" style="display: none;" />
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-sm-12 col-md-2 col-form-label">Pemusik Pagi</label>
-                                <div class="col-sm-12 col-md-auto">
-                                    <input type="checkbox" id="togglePemusikPagi"
-                                        onchange="toggleInputVisibility('pemusikPagiInput')">
-                                </div>
-                                <div class="col-sm-12 col-md-9">
-                                    <input class="form-control" type="text" name="pemusik_pagi" id="pemusikPagiInput"
-                                        placeholder="" style="display: none;" />
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-sm-12 col-md-2 col-form-label">Tamborin Pagi</label>
-                                <div class="col-sm-12 col-md-auto">
-                                    <input type="checkbox" id="toggleTamborinPagi"
-                                        onchange="toggleInputVisibility('tamborinPagiInput')">
-                                </div>
-                                <div class="col-sm-12 col-md-9">
-                                    <input class="form-control" type="text" name="tamborin_pagi" id="tamborinPagiInput"
-                                        placeholder="" style="display: none;" />
-                                </div>
-                            </div>
-
-                            <!-- Repeat this for all the remaining fields in the list -->
-                            <div class="form-group row">
-                                <label class="col-sm-12 col-md-2 col-form-label">Pengkotbah Siang</label>
-                                <div class="col-sm-12 col-md-auto">
-                                    <input type="checkbox" id="togglePengkotbahSiang"
-                                        onchange="toggleInputVisibility('pengkotbahSiangInput')">
-                                </div>
-                                <div class="col-sm-12 col-md-9">
-                                    <input class="form-control" type="text" name="pengkotbah_siang"
-                                        id="pengkotbahSiangInput" placeholder="" style="display: none;" />
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-sm-12 col-md-2 col-form-label">Liturgis Siang</label>
-                                <div class="col-sm-12 col-md-auto">
-                                    <input type="checkbox" id="toggleLiturgisSiang"
-                                        onchange="toggleInputVisibility('liturgisSiangInput')">
-                                </div>
-                                <div class="col-sm-12 col-md-9">
-                                    <input class="form-control" type="text" name="liturgis_siang"
-                                        id="liturgisSiangInput" placeholder="" style="display: none;" />
-                                </div>
-                            </div>
-
-                            <!-- Add the rest of the fields similarly -->
-
-                            <script>
-                                function toggleInputVisibility(inputId) {{
-                            var input = document.getElementById(inputId);
-                            if (input.style.display === "none") {{
-                                input.style.display = "block";
-                            }} else {{
-                                input.style.display = "none";
-                            }}
-                        }}
-                            </script>
-                            Pengkotbah Pagi
-                        </label>
-                        <div class="col-sm-12 col-md-auto">
-                            <input type="checkbox" id="toggleInput" onchange="toggleInputVisibility()">
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="pengkotbahToggle">Pengkotbah Pagi</label>
+                            <input type="checkbox" id="pengkotbahToggle"
+                                onchange="toggleInputVisibility('pengkotbahInput')">
                         </div>
                         <div class="col-sm-12 col-md-9">
                             <input class="form-control" type="text" name="pengkotbah_pagi" id="pengkotbahInput"
@@ -206,109 +108,221 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Liturgis Pagi</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="liturgis_pagi" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="liturgisToggle">Liturgis Pagi</label>
+                            <input type="checkbox" id="liturgisToggle"
+                                onchange="toggleInputVisibility('liturgisInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="liturgis_pagi" id="liturgisInput"
+                                placeholder="" style="display: none;" />
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Singers Pagi</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="singers_pagi" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="singersToggle">Singers Pagi</label>
+                            <input type="checkbox" id="singersToggle" onchange="toggleInputVisibility('singersInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="singers_pagi" id="singersInput" placeholder=""
+                                style="display: none;" />
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Pemusik Pagi</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="pemusik_pagi" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="pemusikToggle">Pemusik Pagi</label>
+                            <input type="checkbox" id="pemusikToggle" onchange="toggleInputVisibility('pemusikInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="pemusik_pagi" id="pemusikInput" placeholder=""
+                                style="display: none;" />
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Tamborin Pagi</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="tamborin_pagi" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="tamborinToggle">Tamborin Pagi</label>
+                            <input type="checkbox" id="tamborinToggle"
+                                onchange="toggleInputVisibility('tamborinInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="tamborin_pagi" id="tamborinInput"
+                                placeholder="" style="display: none;" />
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Penyambut Jemaat Pagi</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="penyambut_jemaat_pagi" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="penyambutToggle">Penyambut Jemaat Pagi</label>
+                            <input type="checkbox" id="penyambutToggle"
+                                onchange="toggleInputVisibility('penyambutInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="penyambut_jemaat_pagi" id="penyambutInput"
+                                placeholder="" style="display: none;" />
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Operator Camera Pagi</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="operator_camera_pagi" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="cameraToggle">Operator Camera Pagi</label>
+                            <input type="checkbox" id="cameraToggle" onchange="toggleInputVisibility('cameraInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="operator_camera_pagi" id="cameraInput"
+                                placeholder="" style="display: none;" />
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Operator Computer Pagi</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="operator_computer_pagi" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="computerToggle">Operator Computer Pagi</label>
+                            <input type="checkbox" id="computerToggle"
+                                onchange="toggleInputVisibility('computerInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="operator_computer_pagi" id="computerInput"
+                                placeholder="" style="display: none;" />
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Operator Sound Pagi</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="operator_sound_pagi" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="soundToggle">Operator Sound Pagi</label>
+                            <input type="checkbox" id="soundToggle" onchange="toggleInputVisibility('soundInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="operator_sound_pagi" id="soundInput"
+                                placeholder="" style="display: none;" />
                         </div>
                     </div>
+
                     <br>
                     <h4 class="text-blue h4">Pelayanan Siang</h4>
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Pengkotbah Siang</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="pengkotbah_siang" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="pengkotbahSiangToggle">Pengkotbah Siang</label>
+                            <input type="checkbox" id="pengkotbahSiangToggle"
+                                onchange="toggleInputVisibility('pengkotbahSiangInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="pengkotbah_siang" id="pengkotbahSiangInput"
+                                placeholder="" style="display: none;" />
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Liturgis Siang</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="liturgis_siang" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="liturgisSiangToggle">Liturgis Siang</label>
+                            <input type="checkbox" id="liturgisSiangToggle"
+                                onchange="toggleInputVisibility('liturgisSiangInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="liturgis_siang" id="liturgisSiangInput"
+                                placeholder="" style="display: none;" />
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Singers Siang</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="singers_siang" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="singersSiangToggle">Singers Siang</label>
+                            <input type="checkbox" id="singersSiangToggle"
+                                onchange="toggleInputVisibility('singersSiangInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="singers_siang" id="singersSiangInput"
+                                placeholder="" style="display: none;" />
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Pemusik Siang</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="pemusik_siang" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="pemusikSiangToggle">Pemusik Siang</label>
+                            <input type="checkbox" id="pemusikSiangToggle"
+                                onchange="toggleInputVisibility('pemusikSiangInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="pemusik_siang" id="pemusikSiangInput"
+                                placeholder="" style="display: none;" />
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Tamborin Siang</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="tamborin_siang" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="tamborinSiangToggle">Tamborin Siang</label>
+                            <input type="checkbox" id="tamborinSiangToggle"
+                                onchange="toggleInputVisibility('tamborinSiangInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="tamborin_siang" id="tamborinSiangInput"
+                                placeholder="" style="display: none;" />
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Penyambut Jemaat Siang</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="penyambut_jemaat_siang" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="penyambutJemaatSiangToggle">Penyambut Jemaat
+                                Siang</label>
+                            <input type="checkbox" id="penyambutJemaatSiangToggle"
+                                onchange="toggleInputVisibility('penyambutJemaatSiangInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="penyambut_jemaat_siang"
+                                id="penyambutJemaatSiangInput" placeholder="" style="display: none;" />
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Operator Camera Siang</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="operator_camera_siang" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="cameraSiangToggle">Operator Camera Siang</label>
+                            <input type="checkbox" id="cameraSiangToggle"
+                                onchange="toggleInputVisibility('cameraSiangInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="operator_camera_siang" id="cameraSiangInput"
+                                placeholder="" style="display: none;" />
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Operator Computer Siang</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="operator_computer_siang" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="computerSiangToggle">Operator Computer Siang</label>
+                            <input type="checkbox" id="computerSiangToggle"
+                                onchange="toggleInputVisibility('computerSiangInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="operator_computer_siang"
+                                id="computerSiangInput" placeholder="" style="display: none;" />
                         </div>
                     </div>
+
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Operator Sound Siang</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" type="text" name="operator_sound_siang" placeholder="" />
+                        <div class="col-sm-12 col-md-3 d-flex justify-content-between align-items-center">
+                            <label class="col-form-label" for="soundSiangToggle">Operator Sound Siang</label>
+                            <input type="checkbox" id="soundSiangToggle"
+                                onchange="toggleInputVisibility('soundSiangInput')">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <input class="form-control" type="text" name="operator_sound_siang" id="soundSiangInput"
+                                placeholder="" style="display: none;" />
                         </div>
                     </div>
+
+                    <script>
+                        function toggleInputVisibility(inputId) { 
+                            var checkbox = document.getElementById(inputId.replace('Input', 'Toggle')); 
+                            var input = document.getElementById(inputId); 
+                            if (checkbox.checked) { 
+                                input.style.display = 'block';  
+                            } else { 
+                                input.style.display = 'none';  
+                                input.value = '';  
+                            } 
+                        } 
+                    </script>
+
                     <br>
                     <div class="form-group">
                         <label class="form-label"><strong>Tata Ibadah</strong></label>
@@ -351,18 +365,6 @@
 
                         toggleGambarInput(); // Initial call
                     });
-                </script>
-                <script>
-                    function toggleInputVisibility() {
-                        var checkbox = document.getElementById('toggleInput');
-                        var input = document.getElementById('pengkotbahInput');
-                        if (checkbox.checked) {
-                            input.style.display = 'block'; 
-                        } else {
-                            input.style.display = 'none'; 
-                            input.value = ''; 
-                        }
-                    }
                 </script>
             </div>
             <!-- Default Basic Forms End -->
